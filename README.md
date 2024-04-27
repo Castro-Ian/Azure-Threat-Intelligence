@@ -1,6 +1,10 @@
 # Project-Azure-Threat-Intelligence
+ 
+Introduction to Project Azure Threat Intelligence
 
-Azure Threat Intelligence  
+In the realm of cloud computing, security remains a paramount concern, particularly when leveraging robust platforms like Microsoft Azure. Project Azure Threat Intelligence is a concerted effort to harness Azure's expansive security features and tools to detect, analyze, and respond to threats effectively. The initiative involves deploying a suite of security measures across various components of Azure, such as Storage Accounts, Virtual Networks, Key Vaults, and more. The goal is to establish a secure cloud infrastructure that is both resilient to cyber threats and compliant with industry standards.
+
+
 1. The image displays details about an Azure Storage account named "dogstorageaccount". This storage account is a component of Azure's cloud storage service, which provides secure, highly available, and scalable data storage.
 
 Here are the key details shown in the image:
@@ -20,7 +24,7 @@ This information provides insights into the configuration, location, replication
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/1.%20Created%20Storage%20Account.png" alt="image-alt-text">
 
-/////////////////
+
 
 2. The image shows the details of a Private Endpoint named "PE-AKV" in the Microsoft Azure environment. A Private Endpoint is a network interface that enables secure, private connectivity from a virtual network to an Azure resource, such as an Azure Key Vault.
 
@@ -40,7 +44,7 @@ The purpose of this Private Endpoint is to establish a secure, private connectio
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/2.%20CreatedKeyVault.png" alt="image-alt-text">
 
-////////////
+
 
 3. The image shows the "Data collection rules" section within the Azure Log Analytics Workspace named "LAW-Dog". This feature allows you to define rules for collecting log data from various sources and routing it to the Log Analytics workspace for analysis, monitoring, and security purposes.
    
@@ -57,9 +61,9 @@ The purpose of this data collection rule is to centralize log data from Windows 
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/3.%20DataCollectionRules.png" alt="image-alt-text">    
 
-///////////////
 
-3.5. The image shows the Watchlist feature in Microsoft Sentinel, which is Azure's cloud-native SIEM (Security Information and Event Management) solution. The Watchlist is a crucial component of Sentinel that allows security analysts and administrators to create and manage lists of entities, such as IP addresses, URLs, or file hashes, that are deemed malicious, suspicious, or of interest for security monitoring and investigation purposes.
+
+4. The image shows the Watchlist feature in Microsoft Sentinel, which is Azure's cloud-native SIEM (Security Information and Event Management) solution. The Watchlist is a crucial component of Sentinel that allows security analysts and administrators to create and manage lists of entities, such as IP addresses, URLs, or file hashes, that are deemed malicious, suspicious, or of interest for security monitoring and investigation purposes.
 
 In this specific view, the following details are displayed:
 
@@ -77,9 +81,9 @@ In this case, the "geoip" Watchlist is likely used for tracking and monitoring I
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/3.5.%20MS%20Sentinel%20Watchlist.png" alt="image-alt-text">
 
-//////////////////
 
-4. The image shows the Azure Network Watcher Topology view, which is a feature of the Azure Network Watcher service. Network Watcher is a network performance monitoring and diagnostic tool in Azure that provides visualization and insights into your Azure virtual networks.
+
+5. The image shows the Azure Network Watcher Topology view, which is a feature of the Azure Network Watcher service. Network Watcher is a network performance monitoring and diagnostic tool in Azure that provides visualization and insights into your Azure virtual networks.
    
 In this specific image, the Topology view displays a geo map of the world, with a single location pinpointed at East US, which is likely an Azure region where some of your Azure resources are deployed.
 The Topology view aims to provide a visual representation of your Azure virtual network resources and their interconnections across different Azure regions. It helps you understand the topology and geographic distribution of your network resources within your Azure subscription.
@@ -90,9 +94,9 @@ Overall, this image showcases the Network Watcher Topology feature, which is a v
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/4.%20Topology%20East%20US.png" alt="image-alt-text">
 
-///////////////////////////
 
-5. The image shows the "Topology" view within the "Network Watcher" tool, which appears to be part of Microsoft Azure. The topology diagram displays a virtual network (VNet) named "SOC-VNET" that contains a subnet. Within the subnet, there are two connected nodes - one labeled "WEB Subnet" and the other "default".
+
+6. The image shows the "Topology" view within the "Network Watcher" tool, which appears to be part of Microsoft Azure. The topology diagram displays a virtual network (VNet) named "SOC-VNET" that contains a subnet. Within the subnet, there are two connected nodes - one labeled "WEB Subnet" and the other "default".
 
 Based on this network topology visualization, it seems to depict a simple Azure virtual network setup with a single subnet containing two resources, likely virtual machines or other compute instances. This provides a high-level overview of how the virtual networking is structured for this particular Azure subscription and region.
 
@@ -106,10 +110,10 @@ As a cybersecurity specialist, key things I would note are:
 Let me know if you need any other details or have additional questions! Analyzing the architecture and security controls of cloud network setups like this is an important part of the cybersecurity role.
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/5.%20External%20Firewall.png" alt="image-alt-text">
-///////////////////////////
 
 
-5.5. This image shows the "Topology" view within the "Network Watcher" tool from Microsoft Azure, similar to the previous image. However, in this case, the topology diagram displays two connected Azure regions - "East US" and "SOC-VNET".
+
+7. This image shows the "Topology" view within the "Network Watcher" tool from Microsoft Azure, similar to the previous image. However, in this case, the topology diagram displays two connected Azure regions - "East US" and "SOC-VNET".
 
 The "SOC-VNET" icon indicates a virtual network (VNet), while the "East US" icon likely represents an Azure region where some resources are deployed.
 
@@ -125,9 +129,9 @@ Multi-region deployments can provide benefits like high availability and geo-red
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/5.%20Soc-Subnet%20VNET.png" alt="image-alt-text">
 
-/////////////////////////////////////
-NEEDS REVISION 
-6. The provided image shows a more complex network topology within the Microsoft Azure "Network Watcher" tool, spanning multiple Azure regions and virtual networks (VNets).
+
+
+8. The provided image shows a more complex network topology within the Microsoft Azure "Network Watcher" tool, spanning multiple Azure regions and virtual networks (VNets).
 
 From the diagram, we can see several interconnected Azure regions, including "SOC-VNET", "AttackVM", "IpConfig", "WindowsVM", "QualysVM", "AttackVM", and others. These regions contain various subnets and virtual machines (VMs).
 
@@ -148,9 +152,9 @@ Let me know if you have any other specific questions about securing this type of
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/6.%20NSG%20SC-7%20Defense%20in%20Depth.png" alt="image-alt-text">
 
-////////////////////////////////////////
 
-6.5. The image shows the "Resource View" within the "Network Watcher" tool's "Topology" view in Microsoft Azure. This hierarchical view provides a breakdown of the resources within a specific virtual network (VNet).
+
+9. The image shows the "Resource View" within the "Network Watcher" tool's "Topology" view in Microsoft Azure. This hierarchical view provides a breakdown of the resources within a specific virtual network (VNet).
 
 The VNet shown is named "SOC-VNET" and it contains a subnet called "default". Within the "default" subnet, there is a resource named "PE-Storage", which appears to be a storage account based on the icon.
 
@@ -167,9 +171,9 @@ Storage accounts can hold critical data, so it's important to protect them with 
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/6.%20PE-Storage.png" alt="image-alt-text">
 
-//////////////////
 
-7. The image shows the "Resource View" for a specific virtual machine (VM) named "PE-AKV" within the "SOC-VNET" virtual network in Microsoft Azure.
+
+10. The image shows the "Resource View" for a specific virtual machine (VM) named "PE-AKV" within the "SOC-VNET" virtual network in Microsoft Azure.
 
 The resource hierarchy indicates that the "SOC-VNET" virtual network contains a subnet called "default", and within that subnet, there is a VM resource named "PE-AKV". The icon suggests that "PE-AKV" is likely an Azure Key Vault resource, which is a secure vault for storing and managing cryptographic keys, certificates, and secrets.
 
@@ -188,9 +192,9 @@ Let me know if you have any further questions or if there are any other aspects 
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/7.%20PE-KeyVault.png" alt="image-alt-text">
 
-/////////////////////
 
- 8. The image shows the Network Watcher topology view in the Microsoft Azure portal. It displays a resource view of virtual networks (VNets) and virtual machines (VMs) within an Azure subscription and location.
+
+11. The image shows the Network Watcher topology view in the Microsoft Azure portal. It displays a resource view of virtual networks (VNets) and virtual machines (VMs) within an Azure subscription and location.
 
 From a cybersecurity perspective, here are a few key observations:
 
@@ -217,9 +221,9 @@ However, to do a deeper security assessment, additional information would be nee
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/8.%20WindowsVM-IP.png" alt="image-alt-text">
 
-//////////////////////////
 
-9.The image shows the Network Watcher tool in Microsoft Azure, this time displaying the Topology view of a Virtual Network named "attackvm434".
+
+12.The image shows the Network Watcher tool in Microsoft Azure, this time displaying the Topology view of a Virtual Network named "attackvm434".
 
 The topology diagram depicts the network resources and their connections. It includes 4 Virtual Machines (VMs): attackvm434, AttackVM, AttackVM-nsg, and ipconfigx. These VMs are interconnected within the same virtual network subnet.
 
@@ -231,9 +235,9 @@ So while this topology appears to be for a controlled security testing environme
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/9.%20Linux%20NIC%20Card.png" alt="image-alt-text">
 
-///////////////////////
 
-9.5. The image shows the Network Watcher tool in Microsoft Azure, displaying the Topology view of a Virtual Network named "AttackVM-ip".
+
+13. The image shows the Network Watcher tool in Microsoft Azure, displaying the Topology view of a Virtual Network named "AttackVM-ip".
 
 The topology diagram visualizes the network resources and their interconnections. It includes 4 Virtual Machines (VMs): AttackVM-ip, ipconfigx, attackvm434, and AttackVM-nsg. These VMs appear to be connected together within the same virtual network.
 
@@ -247,9 +251,9 @@ In summary, while this setup seems to be for controlled security testing, care s
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/9.%20LinuxVM-IP.png" alt="image-alt-text">
 
-///////////////////////
 
-10. The image shows the Network Watcher tool in Microsoft Azure, displaying the Topology view of a Virtual Network named "QualysVM-Netint-97b3".
+
+14. The image shows the Network Watcher tool in Microsoft Azure, displaying the Topology view of a Virtual Network named "QualysVM-Netint-97b3".
 
 The topology diagram visualizes the network resources and their interconnections. It includes 3 Virtual Machines (VMs): QualysVM-Netint-97b3, QualysVM, and QualysVM-nsg-97b3, as well as what appears to be a subnet or gateway resource called ipconfigx. These resources are connected within the same virtual network.
 
@@ -273,9 +277,8 @@ In summary, the use of Qualys suggests the organization is taking proactive step
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/10.%20Qualys%20NIC%20Card.png" alt="image-alt-text">
 
 
-//////////////////////
 
-10.5 The image shows the Network Watcher tool in Microsoft Azure, displaying the Topology view of a Virtual Network named "QualysVM-ip-500".
+15. The image shows the Network Watcher tool in Microsoft Azure, displaying the Topology view of a Virtual Network named "QualysVM-ip-500".
 
 The topology diagram visualizes the network resources and their interconnections. It includes 4 Virtual Machines (VMs): QualysVM-ip-500, ipconfigx, QualysVM-Netint-9763, and QualysVM-nsg-9763. These VMs appear to be connected within the same virtual network subnet.
 
@@ -296,9 +299,9 @@ In summary, while the use of Qualys suggests a positive security initiative, car
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/10.%20QualysVM-IP.png" alt="image-alt-text">
 
-////////////////////
 
-11. The image shows a data collection rule named "DCR-ALL" within the Microsoft Azure Log Analytics workspace interface. This rule appears to collect data from multiple sources, specifically Windows Event Logs and Linux Syslog, and sends the collected data to two destinations labeled "Azure Monitor Logs".
+
+16. The image shows a data collection rule named "DCR-ALL" within the Microsoft Azure Log Analytics workspace interface. This rule appears to collect data from multiple sources, specifically Windows Event Logs and Linux Syslog, and sends the collected data to two destinations labeled "Azure Monitor Logs".
 
 From a cybersecurity perspective, collecting and centrally aggregating log data from various sources is a crucial practice for effective security monitoring, incident detection, and investigation. By consolidating logs from different systems, such as Windows and Linux, into a centralized repository like Azure Monitor Logs, security teams can gain a comprehensive view of their environment, perform correlation analysis, and identify potential security threats or anomalies.
 
@@ -308,9 +311,9 @@ Regular review and fine-tuning of the data collection rules are also recommended
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/11.%20Log%20Analytics%20Workspace%20Data%20Sources.png" alt="image-alt-text">
 
-////////////////////////////
 
-12. The image shows an "Add data source" dialog box within the Microsoft Azure Log Analytics workspace interface, specifically for the "DCR-ALL" data collection rule.
+
+17. The image shows an "Add data source" dialog box within the Microsoft Azure Log Analytics workspace interface, specifically for the "DCR-ALL" data collection rule.
 
 The selected data source type is "Windows Event Logs", and the configuration options allow for choosing between using Sentinel (the Microsoft Defender for Cloud built-in connector) or a custom configuration to collect Windows Security events.
 
@@ -331,9 +334,9 @@ However, it's essential to carefully consider the storage costs associated with 
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/12.%20LAW-Windows%20Event%20Logs%20Custom.png" alt="image-alt-text">
 
-//////////////////////////
 
-13. The image shows the same "Add data source" dialog box within the Microsoft Azure Log Analytics workspace interface for the "DCR-ALL" data collection rule, but with the "Custom" option selected for collecting Windows Event Logs.
+
+18. The image shows the same "Add data source" dialog box within the Microsoft Azure Log Analytics workspace interface for the "DCR-ALL" data collection rule, but with the "Custom" option selected for collecting Windows Event Logs.
 
 In this custom configuration, the user has more granular control over which specific event log levels and categories are collected. The available options include:
 
@@ -362,9 +365,9 @@ By carefully selecting the appropriate log levels and categories, organizations 
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/13.%20LAW%20Windows%20Events%20Logs.png" alt="image-alt-text">
 
-//////////////////////
 
-14. The image shows the "Add data source" dialog box within the Microsoft Azure Log Analytics workspace interface for the "DCR-ALL" data collection rule. In this case, the selected data source type is "Linux Syslog".
+
+19. The image shows the "Add data source" dialog box within the Microsoft Azure Log Analytics workspace interface for the "DCR-ALL" data collection rule. In this case, the selected data source type is "Linux Syslog".
 
 The dialog box allows for setting minimum log levels for selected syslog facilities. The available facilities include:
 
@@ -393,9 +396,9 @@ It's important to regularly review and adjust the syslog collection settings bas
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/14.%20Linux%20Syslog.png" alt="image-alt-text"> 
 
-////////////////////
 
-15. The image shows the "Agents" page within the "LAW-Dog" Log Analytics workspace in the Microsoft Azure portal. It provides an overview of the connected agents for both Windows and Linux servers.
+
+20. The image shows the "Agents" page within the "LAW-Dog" Log Analytics workspace in the Microsoft Azure portal. It provides an overview of the connected agents for both Windows and Linux servers.
 
 According to the information displayed, there is 1 Windows computer connected via the Azure Monitor Windows agent, and 1 Windows computer connected via the Log Analytics Windows agent (legacy). The "See them in Logs" link suggests that more details about these connected computers can be found in the collected logs.
 
@@ -413,9 +416,9 @@ Overall, keeping a close eye on the connected agents, ensuring their proper conf
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/15.%20Monitor%20for%20Windows.png" alt="image-alt-text">
 
-/////////////////////
 
-16. The image shows the "Configure Fusion" step in the Analytics Rule Wizard for Microsoft Sentinel, which is a cloud-native Security Information and Event Management (SIEM) solution provided by Microsoft Azure.
+
+21. The image shows the "Configure Fusion" step in the Analytics Rule Wizard for Microsoft Sentinel, which is a cloud-native Security Information and Event Management (SIEM) solution provided by Microsoft Azure.
 
 In this step, you can configure the source signals that Microsoft Sentinel's Fusion machine learning model will use to detect multi-stage attacks by identifying combinations of anomalous behaviors and suspicious activities at various stages of the kill chain.
 
@@ -427,9 +430,9 @@ Overall, this interface allows you to customize which data sources and alert typ
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/16.%20Sentinel%20Fusion%20Rule.png" alt="image-alt-text">
 
-///////////////////
 
-16.5. The image shows the configuration options for an Azure Storage Account named "dogstorageaccount" in the Microsoft Azure portal.
+
+22. The image shows the configuration options for an Azure Storage Account named "dogstorageaccount" in the Microsoft Azure portal.
 
 Here are the key details and settings visible:
 
@@ -451,9 +454,9 @@ The configuration shows some secure defaults like disabling anonymous Blob acces
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/16.5.%20Allow%20Blob%20storage%20disabled.png" alt="image-alt-text">
 
-///////////////////////
 
-16.7. The image shows the networking configuration settings for an Azure Key Vault resource named "LawDogVault" in the Microsoft Azure portal.
+
+23. The image shows the networking configuration settings for an Azure Key Vault resource named "LawDogVault" in the Microsoft Azure portal.
 
 The key security-related settings visible are:
 
@@ -473,9 +476,9 @@ Overall, these settings align with security best practices for an Azure Key Vaul
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/16.7.%20Disabled%20public%20acces%20to%20key%20vault.png" alt="image-alt-text">
 
-//////////////
 
-17. The image shows the networking configuration settings for an Azure Storage Account named "dogstorageaccount".
+
+24. The image shows the networking configuration settings for an Azure Storage Account named "dogstorageaccount".
 
 Key observations:
 
@@ -499,9 +502,9 @@ Overall, the configuration aims to minimize exposure to public networks and leve
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/17.%20SC7.png" alt="image-alt-text">
 
-//////////////////
 
-17.5. The image shows the "Security Policies" section of the Microsoft Defender for Cloud offering in the Azure portal. This page allows you to manage and apply various security standards and benchmarks to your cloud environment.
+
+25. The image shows the "Security Policies" section of the Microsoft Defender for Cloud offering in the Azure portal. This page allows you to manage and apply various security standards and benchmarks to your cloud environment.
 
 The key elements visible are:
 
@@ -524,9 +527,9 @@ Overall, this interface provides a centralized way to manage and enforce securit
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/17.5%20Security%20Policy%20Screenshot%20Microsoft%20Defender.png" alt="image-alt-text">
 
-/////////////////
 
-18. The image appears to be a screenshot from the Microsoft Azure portal, specifically the "Create a private endpoint" section for a storage account named "dogstorageaccount". This section allows you to configure network access and DNS settings for the private endpoint.
+
+25. The image appears to be a screenshot from the Microsoft Azure portal, specifically the "Create a private endpoint" section for a storage account named "dogstorageaccount". This section allows you to configure network access and DNS settings for the private endpoint.
 
 From a cybersecurity perspective, a few key points can be observed:
 
@@ -542,9 +545,9 @@ Overall, the use of private endpoints and proper DNS configuration can enhance t
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/18.%20Private%20DNS.png" alt="image-alt-text">
 
-/////////////////
 
-19. The image shows a concerning security configuration in the Microsoft Azure portal. There is a network security group (NSG) named "AttackVM-nsg" with an inbound security rule "DANGERAllowAnyCustomAnyInbound" that appears to allow any source on any port using any protocol to access the associated resources.
+
+26. The image shows a concerning security configuration in the Microsoft Azure portal. There is a network security group (NSG) named "AttackVM-nsg" with an inbound security rule "DANGERAllowAnyCustomAnyInbound" that appears to allow any source on any port using any protocol to access the associated resources.
 
 This kind of overly permissive inbound rule essentially opens up the resources associated with this NSG to potential attacks from any source on the internet, which is an extremely risky security practice. It negates the purpose of using network security groups to control and restrict access.
 
@@ -562,9 +565,9 @@ It is strongly recommended to review and remediate this security rule immediatel
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/19.%20Attack%20VM%20Firewall%20Honey%20Net.png" alt="image-alt-text">
 
-////////////////////
 
-20. The image shows another extremely concerning security configuration within the Microsoft Azure portal. There is a network security group named "WindowsVM-nsg" that has an inbound security rule called "DANGERAllowAnyCustomAnyInbound" with the highest priority (100). This rule allows any source from any port using any protocol to access resources associated with this network security group.
+
+27. The image shows another extremely concerning security configuration within the Microsoft Azure portal. There is a network security group named "WindowsVM-nsg" that has an inbound security rule called "DANGERAllowAnyCustomAnyInbound" with the highest priority (100). This rule allows any source from any port using any protocol to access resources associated with this network security group.
 
 This overly permissive inbound rule essentially exposes the associated resources to potential attacks from any source on the internet, presenting a significant security risk. Some specific security concerns are:
 
@@ -582,9 +585,9 @@ It is strongly recommended to review and remediate this security rule immediatel
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/20.%20Windows%20VM%20Firewall%20RuleHoney%20Net%20Screenshot.png" alt="image-alt-text">
 
-///////////////////////////
 
-21. The image shows the Analytics section of Microsoft Sentinel, which is a cloud-native security information and event management (SIEM) solution. Specifically, it displays the list of active detection rules configured within the selected workspace.
+
+28. The image shows the Analytics section of Microsoft Sentinel, which is a cloud-native security information and event management (SIEM) solution. Specifically, it displays the list of active detection rules configured within the selected workspace.
 
 From a cybersecurity perspective, a few key observations can be made:
 
@@ -606,7 +609,7 @@ Overall, the image showcases a well-configured Microsoft Sentinel deployment wit
 
 ////////////////////
 
-22. The image shows the "Workbooks" section within Microsoft Sentinel, which allows you to create and manage interactive reports and visualizations for security monitoring and analysis.
+29. The image shows the "Workbooks" section within Microsoft Sentinel, which allows you to create and manage interactive reports and visualizations for security monitoring and analysis.
 
 From a cybersecurity perspective, a few observations can be made:
 
@@ -624,9 +627,9 @@ Overall, the workbooks shown in the image indicate a proactive approach to secur
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/22.%20Microsoft%20Sentinel%20Workbooks.png" alt="image-alt-text">
 
-////////////
 
-23. This image appears to be a cybersecurity monitoring dashboard from Microsoft Sentinel, likely showing failed SSH authentication attempts across the world. The world map displays green dots of varying sizes scattered across different countries and regions, likely representing the source locations of these failed SSH login attempts.
+
+30. This image appears to be a cybersecurity monitoring dashboard from Microsoft Sentinel, likely showing failed SSH authentication attempts across the world. The world map displays green dots of varying sizes scattered across different countries and regions, likely representing the source locations of these failed SSH login attempts.
 
 One particular dot in the Asia-Pacific region is highlighted in red, which could indicate a higher volume of failed SSH logins originating from that specific location compared to others.
 
@@ -636,9 +639,9 @@ Overall, this dashboard provides a global view of potentially malicious SSH logi
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/23.%20linux-ssh-auth-fail%20Screenshot%20Workbook.png" alt="image-alt-text">
 
-///////////////
 
-24. This image appears to be another view from the Microsoft Sentinel cybersecurity monitoring dashboard, displaying global failed authentication attempts, likely related to Microsoft SQL Server (mssql).
+
+31. This image appears to be another view from the Microsoft Sentinel cybersecurity monitoring dashboard, displaying global failed authentication attempts, likely related to Microsoft SQL Server (mssql).
 
 The world map shows orange and red dots scattered across different countries, representing the source locations of these failed authentication attempts. The larger red dots seem to indicate higher volumes of failed logins originating from those regions.
 
@@ -650,9 +653,9 @@ Overall, this dashboard highlights potential security risks or ongoing brute-for
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/24.%20Mssql-auth-fail-%20Screenshot%20Workbook.png" alt="image-alt-text">
 
-///////////////
 
-25. This image appears to be a cybersecurity monitoring dashboard from Microsoft Sentinel, displaying global incidents where malicious traffic or activities were allowed into networks or systems.
+
+32. This image appears to be a cybersecurity monitoring dashboard from Microsoft Sentinel, displaying global incidents where malicious traffic or activities were allowed into networks or systems.
 
 The world map shows green dots scattered across various countries and regions, representing the locations from where these malicious activities originated. One particular dot in western Europe is highlighted in red, indicating a relatively higher volume of such incidents originating from that specific location.
 
@@ -664,9 +667,9 @@ Overall, this global view enables cybersecurity professionals to monitor and ana
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/25.%20nsg-malicious-allowed-in%20Screenshot%20Workbook.png" alt="image-alt-text"> 
 
-///////////////
 
-26. This image appears to be a cybersecurity monitoring dashboard from Microsoft Sentinel, displaying failed Windows Remote Desktop Protocol (RDP) authentication attempts across the globe.
+
+33. This image appears to be a cybersecurity monitoring dashboard from Microsoft Sentinel, displaying failed Windows Remote Desktop Protocol (RDP) authentication attempts across the globe.
 
 The world map shows green dots scattered across different countries and regions, representing the locations from where these failed RDP login attempts originated. One particular red dot in Central Asia stands out, indicating a relatively higher volume of failed RDP authentication attempts originating from that specific location.
 
@@ -678,9 +681,9 @@ This global view enables security professionals to identify patterns, sources, a
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/26.%20windows-rdp-auth-fail%20Screenshot%20Workbook.png" alt="image-alt-text"> 
 
-///////////////
 
-27. The image appears to be a summary report showing the security posture and metrics before and after implementing security measures in an environment.
+
+34. The image appears to be a summary report showing the security posture and metrics before and after implementing security measures in an environment.
 
 The top portion displays the start and stop time of the analysis period, along with various security event counts across different platforms and services, such as Windows VMs, Linux VMs, Microsoft Defender for Cloud, Microsoft Sentinel incidents, and Network Security Group (NSG) inbound malicious flows allowed and blocked.
 
@@ -699,9 +702,9 @@ Overall, this report summarizes the positive impact of the security enhancements
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/27.%20After%20Securing%20environment%20updated%204-11-24.png" alt="image-alt-text"> 
 
-/////////////
 
-28. The image appears to be a screenshot from the Microsoft Azure Sentinel incident management console. It is displaying details about a cybersecurity incident classified as a "Brute Force ATTEMPT - Linux Syslog" against a Linux system.
+
+35. The image appears to be a screenshot from the Microsoft Azure Sentinel incident management console. It is displaying details about a cybersecurity incident classified as a "Brute Force ATTEMPT - Linux Syslog" against a Linux system.
 
 Key observations from the image:
 
@@ -721,9 +724,9 @@ Based on the information provided, this appears to be a detected brute force att
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/28.%20Brute%20Force%20attempt%20closed.png" alt="image-alt-text">
 
-/////////////////////////////
 
-29. The image displays the Microsoft Azure interface, specifically within the Microsoft Sentinel section, which is Azure's security information and event management (SIEM) platform. The page shown is focused on an incident labeled "CUSTOM: Brute Force ATTEMPT - Linux Syslog."
+
+36. The image displays the Microsoft Azure interface, specifically within the Microsoft Sentinel section, which is Azure's security information and event management (SIEM) platform. The page shown is focused on an incident labeled "CUSTOM: Brute Force ATTEMPT - Linux Syslog."
 
 Key elements visible in the screenshot are:
 
@@ -745,9 +748,9 @@ This snapshot provides an insight into the monitoring and response capabilities 
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/29.%20Closed%20Brute%20force%202.png" alt="image-alt-text">
 
-/////////////
 
-30. The image is a screenshot from the Microsoft Azure portal, specifically within the Microsoft Sentinel service, showcasing a security incident management interface. The incident, named "CUSTOM: Brute Force SUCCESS - Linux Syslog," has been assigned a high severity but is currently marked as closed.
+
+37. The image is a screenshot from the Microsoft Azure portal, specifically within the Microsoft Sentinel service, showcasing a security incident management interface. The incident, named "CUSTOM: Brute Force SUCCESS - Linux Syslog," has been assigned a high severity but is currently marked as closed.
 
 Key elements present in the screenshot are:
 
@@ -769,9 +772,9 @@ This interface provides cybersecurity professionals with an organized view to mo
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/30.%20Linux%20Syslog%20Closed.png" alt="image-alt-text">
 
-//////////////////
 
-31. The image shows the Microsoft Azure interface, focusing on the configuration of Network Security Groups (NSGs). NSGs are used to control network traffic to and from Azure resources within an Azure virtual network. The screenshot specifically highlights the security rules that determine the allowed and denied traffic for network interfaces (NICs), VMs, and subnets.
+
+38. The image shows the Microsoft Azure interface, focusing on the configuration of Network Security Groups (NSGs). NSGs are used to control network traffic to and from Azure resources within an Azure virtual network. The screenshot specifically highlights the security rules that determine the allowed and denied traffic for network interfaces (NICs), VMs, and subnets.
 
 Key elements visible in the screenshot include:
 
@@ -793,4 +796,8 @@ Key elements visible in the screenshot include:
 
 This NSG configuration snapshot is instrumental for cybersecurity specialists in ensuring the right security posture is maintained. It shows how granular access control can be enforced for a network segment within an Azure environment to protect against unauthorized access or other security risks.
 
-<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/31.%20NSG%20Blocked%20Ip%20address.png" alt="image-alt-text">
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/31.%20NSG%20Blocked%20Ip%20address.png" alt="image-alt-text"> 
+
+Conclusion of Project Azure Threat Intelligence
+
+After implementing a comprehensive set of security controls and leveraging Azure's advanced SIEM capabilities through Microsoft Sentinel, Project Azure Threat Intelligence has successfully heightened the security posture of the cloud environment. The deployment of Network Security Groups (NSGs), management of access controls, and integration of security analytics have led to a marked decrease in security threats and incidents. Through continuous monitoring, strategic incident response, and adherence to security best practices, we have established a robust framework that not only mitigates current risks but is also scalable to meet future security challenges. This initiative underscores our commitment to maintaining a vigilant and proactive stance in cloud security management.
