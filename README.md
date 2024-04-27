@@ -43,13 +43,16 @@ The purpose of this Private Endpoint is to establish a secure, private connectio
 ////////////
 
 3. The image shows the "Data collection rules" section within the Azure Log Analytics Workspace named "LAW-Dog". This feature allows you to define rules for collecting log data from various sources and routing it to the Log Analytics workspace for analysis, monitoring, and security purposes.
+   
 In this specific view, there is one data collection rule named "DCR-ALL" configured. Here are the details shown for this rule:
+
 1.	Subscription: The rule is associated with the "Azure subscription 1" subscription.
 2.	Resource Group: It belongs to the "RG-SOC" resource group.
 3.	Location: The rule is configured for the "East US" region.
 4.	Data Sources: The data sources included in this rule are "Windows Event Logs" and "Linux Syslog". This means that the rule is collecting event logs from Windows machines and system logs from Linux machines.
 5.	Destinations: The collected log data is being sent to "Azure Monitor Logs", which is the Log Analytics workspace itself.
 6.	Kind: The kind of data collection rule is listed as "All", indicating that it is a general-purpose rule for collecting various types of log data.
+   
 The purpose of this data collection rule is to centralize log data from Windows and Linux systems within the "LAW-Dog" Log Analytics workspace. This allows for unified monitoring, analysis, and security operations across the infrastructure. By collecting and storing log data in Log Analytics, you can leverage various Azure services like Azure Monitor, Azure Sentinel, or custom log analytics solutions to gain insights, detect threats, and proactively manage your Azure environment.
 
 <img src="(https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/3.%20DataCollectionRules.png)" alt="image-alt-text">
