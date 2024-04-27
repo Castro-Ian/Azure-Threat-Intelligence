@@ -38,7 +38,7 @@ Here are the key details displayed:
 
 The purpose of this Private Endpoint is to establish a secure, private connection from the "SOC-VNET" virtual network to the "LawDogVault" Azure Key Vault instance. This enables resources within the virtual network to access the Key Vault securely, without exposing it directly to the public internet. Private Endpoints are a critical component of Azure's networking architecture for enhancing security and controlling access to Azure resources.
 
-<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/2.%20CreatedKeyVault.png" alt="image-alt-text">
+<img src="(https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/2.%20CreatedKeyVault.png)" alt="image-alt-text">
 
 ////////////
 
