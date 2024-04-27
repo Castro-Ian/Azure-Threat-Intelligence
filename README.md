@@ -88,11 +88,11 @@ This particular view shows a very simple topology with only one location pinned 
 
 Overall, this image showcases the Network Watcher Topology feature, which is a valuable tool for Azure administrators and security professionals to gain visibility into their Azure network topology, identify potential connectivity issues, and plan for secure and efficient network architectures.
 
-<img src="image-url" alt="image-alt-text">
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/4.%20Topology%20East%20US.png" alt="image-alt-text">
 
 ///////////////////////////
 
-5. The image shows the "Topology" view within the "Network Watcher" tool, which appears to be part of Microsoft Azure. The topology diagram displays a virtual network (VNet) named "SSC-VNET" that contains a subnet. Within the subnet, there are two connected nodes - one labeled "WEB Subnet" and the other "default".
+5. The image shows the "Topology" view within the "Network Watcher" tool, which appears to be part of Microsoft Azure. The topology diagram displays a virtual network (VNet) named "SOC-VNET" that contains a subnet. Within the subnet, there are two connected nodes - one labeled "WEB Subnet" and the other "default".
 
 Based on this network topology visualization, it seems to depict a simple Azure virtual network setup with a single subnet containing two resources, likely virtual machines or other compute instances. This provides a high-level overview of how the virtual networking is structured for this particular Azure subscription and region.
 
@@ -105,13 +105,13 @@ As a cybersecurity specialist, key things I would note are:
 
 Let me know if you need any other details or have additional questions! Analyzing the architecture and security controls of cloud network setups like this is an important part of the cybersecurity role.
 
-<img src="image-url" alt="image-alt-text">
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/5.%20External%20Firewall.png" alt="image-alt-text">
 ///////////////////////////
 
 
-5.5. This image shows the "Topology" view within the "Network Watcher" tool from Microsoft Azure, similar to the previous image. However, in this case, the topology diagram displays two connected Azure regions - "East US" and "SSC-VNET".
+5.5. This image shows the "Topology" view within the "Network Watcher" tool from Microsoft Azure, similar to the previous image. However, in this case, the topology diagram displays two connected Azure regions - "East US" and "SOC-VNET".
 
-The "SSC-VNET" icon indicates a virtual network (VNet), while the "East US" icon likely represents an Azure region where some resources are deployed.
+The "SOC-VNET" icon indicates a virtual network (VNet), while the "East US" icon likely represents an Azure region where some resources are deployed.
 
 From a cybersecurity perspective, this topology suggests that the Azure environment spans multiple regions, with the "SSC-VNET" virtual network present in a different region than the resources in "East US". Some key security considerations for this setup would be:
 
@@ -123,15 +123,15 @@ From a cybersecurity perspective, this topology suggests that the Azure environm
 
 Multi-region deployments can provide benefits like high availability and geo-redundancy, but it's important to assess and manage the expanded attack surface and potential security risks that come with a more distributed infrastructure. Let me know if you have any other questions!
 
-<img src="image-url" alt="image-alt-text">
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/5.%20Soc-Subnet%20VNET.png" alt="image-alt-text">
 
 /////////////////////////////////////
-
+NEEDS REVISION 
 6. The provided image shows a more complex network topology within the Microsoft Azure "Network Watcher" tool, spanning multiple Azure regions and virtual networks (VNets).
 
-From the diagram, we can see several interconnected Azure regions, including "SSC-VNET", "AttackRR", "ProximityPlacementGroup396", "WindowsVM", "ChallengeReg", "AttackVM", and others. These regions contain various subnets and virtual machines (VMs).
+From the diagram, we can see several interconnected Azure regions, including "SOC-VNET", "AttackVM", "IpConfig", "WindowsVM", "QualysVM", "AttackVM", and others. These regions contain various subnets and virtual machines (VMs).
 
-The VNets are connected to each other and to the "AttackVM" region, forming a hub-and-spoke network architecture. This allows communication between the different network segments.
+The VNets are connected to each other, forming a hub-and-spoke network architecture. This allows communication between the different network segments.
 
 From a cybersecurity perspective, some important considerations for this topology would be:
 
@@ -146,7 +146,7 @@ Given the scale and complexity of this multi-region topology, it would require c
 
 Let me know if you have any other specific questions about securing this type of Azure network architecture!
 
-<img src="image-url" alt="image-alt-text">
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/6.%20NSG%20SC-7%20Defense%20in%20Depth.png" alt="image-alt-text">
 
 ////////////////////////////////////////
 
@@ -165,7 +165,7 @@ From a cybersecurity standpoint, the key aspects to consider for this resource v
 
 Storage accounts can hold critical data, so it's important to protect them with a defense-in-depth approach involving identity and access management, encryption, monitoring, and secure network configuration. Azure provides various built-in security features for storage, but proper configuration and monitoring are essential.
 
-<img src="image-url" alt="image-alt-text">
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/6.%20PE-Storage.png" alt="image-alt-text">
 
 //////////////////
 
@@ -186,7 +186,7 @@ Azure Key Vault is a critical service for securely managing sensitive informatio
 
 Let me know if you have any further questions or if there are any other aspects of the resource view you'd like me to discuss from a security standpoint.
 
-<img src="image-url" alt="image-alt-text">
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/7.%20PE-KeyVault.png" alt="image-alt-text">
 
 /////////////////////
 
@@ -204,5 +204,7 @@ From a cybersecurity perspective, here are a few key observations:
 
 To further enhance security, it would be important to review the network security group (NSG) rules associated with the VNets and VMs, ensure proper access controls and permissions are in place, and monitor network traffic for any anomalous activities. Regular security assessments and penetration testing can also help identify and remediate potential vulnerabilities in the Azure environment.
 
-<img src="image-url" alt="image-alt-text">
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/8.%20Windows%20NIC%20card.png" alt="image-alt-text">
 /////////////////////////////////////////////
+
+8.5 
