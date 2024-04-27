@@ -605,3 +605,120 @@ Overall, the image showcases a well-configured Microsoft Sentinel deployment wit
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/21.%20Sentinel%20Analytics%20Incidents%20(SIEM).png" alt="image-alt-text">
 
 ////////////////////
+
+22. The image shows the "Workbooks" section within Microsoft Sentinel, which allows you to create and manage interactive reports and visualizations for security monitoring and analysis.
+
+From a cybersecurity perspective, a few observations can be made:
+
+1. Custom Workbooks: The section displays 4 custom workbooks named "linux-ssh-auth-fail", "mssql-auth-fail", "nsg-malicious-allowed-in", and "windows-rdp-auth-fail". These workbook names suggest they are designed to monitor and report on failed authentication attempts for various services like SSH, Microsoft SQL Server, and Remote Desktop Protocol (RDP). Tracking and investigating failed authentication attempts is crucial for detecting potential brute-force attacks or unauthorized access attempts.
+
+2. Malicious Traffic Detection: The workbook titled "nsg-malicious-allowed-in" likely focuses on analyzing network traffic allowed through network security groups (NSGs) that may be indicative of malicious activity. This can help identify potential security policy violations or compromised resources within the environment.
+
+3. Threat Hunting: The presence of the "Hunting" section in the left navigation pane suggests that Microsoft Sentinel supports proactive threat hunting capabilities. Threat hunting allows security teams to actively search for indicators of compromise (IoCs) or suspicious activities that may have evaded automated detection rules.
+
+4. Threat Intelligence: The "Threat Intelligence" section likely provides integration with threat intelligence feeds, enabling the correlation of security events with known indicators of compromise (IoCs), threat actor tactics, techniques, and procedures (TTPs), and other relevant threat data.
+
+5. MITRE ATT&CK Integration: The "MITRE ATT&CK (Preview)" section suggests Microsoft Sentinel incorporates the MITRE ATT&CK framework, a knowledge base of adversary tactics and techniques. This integration can help map detected security events to specific adversary behaviors, facilitating better understanding and response to potential threats.
+
+Overall, the workbooks shown in the image indicate a proactive approach to security monitoring, with a focus on detecting and investigating failed authentication attempts, malicious network traffic, and leveraging threat intelligence and frameworks like MITRE ATT&CK for enhanced threat detection and analysis.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/22.%20Microsoft%20Sentinel%20Workbooks.png" alt="image-alt-text">
+
+////////////
+
+23. This image appears to be a cybersecurity monitoring dashboard from Microsoft Sentinel, likely showing failed SSH authentication attempts across the world. The world map displays green dots of varying sizes scattered across different countries and regions, likely representing the source locations of these failed SSH login attempts.
+
+One particular dot in the Asia-Pacific region is highlighted in red, which could indicate a higher volume of failed SSH logins originating from that specific location compared to others.
+
+The image also includes labels at the bottom, which seem to correspond to the sizes of the green dots on the map, possibly indicating the number of failed SSH authentication events detected from those locations. For example, Sydney (Australia) has 4,690 events, Castilione Delle Stiviere (Italy) has 800 events, and so on.
+
+Overall, this dashboard provides a global view of potentially malicious SSH login attempts, allowing cybersecurity professionals to monitor and identify potential threats or attack patterns from different geographic regions.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/23.%20linux-ssh-auth-fail%20Screenshot%20Workbook.png" alt="image-alt-text">
+
+///////////////
+
+24. This image appears to be another view from the Microsoft Sentinel cybersecurity monitoring dashboard, displaying global failed authentication attempts, likely related to Microsoft SQL Server (mssql).
+
+The world map shows orange and red dots scattered across different countries, representing the source locations of these failed authentication attempts. The larger red dots seem to indicate higher volumes of failed logins originating from those regions.
+
+The legend at the bottom provides information on the specific locations and the corresponding number of failed authentication events. For example, Mar del Plata in Argentina has 3,150 failed events, Surfers Paradise in Australia has 3,130 events, and Wellington Point in Australia has 2,140 events.
+
+Additionally, there is a large yellow dot in the East Asia region, which could signify a significant number of failed authentication attempts originating from that particular location. The label indicates that this yellow dot represents Aalst in Belgium, with 86 failed events.
+
+Overall, this dashboard highlights potential security risks or ongoing brute-force attacks targeting Microsoft SQL Server installations from various geographic locations worldwide, allowing cybersecurity teams to monitor and respond to these threats effectively.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/24.%20Mssql-auth-fail-%20Screenshot%20Workbook.png" alt="image-alt-text">
+
+///////////////
+
+25. This image appears to be a cybersecurity monitoring dashboard from Microsoft Sentinel, displaying global incidents where malicious traffic or activities were allowed into networks or systems.
+
+The world map shows green dots scattered across various countries and regions, representing the locations from where these malicious activities originated. One particular dot in western Europe is highlighted in red, indicating a relatively higher volume of such incidents originating from that specific location.
+
+The legend at the bottom provides details about the locations and the corresponding number of incidents detected. For instance, São Paulo in Brazil had 1,670 incidents, Tobermory in Canada had 1,130 incidents, and Sydney in Australia had 654 incidents.
+
+It's important to note that while this dashboard aims to identify potential security threats, allowing some malicious traffic through could be part of a controlled security testing process or a result of misconfigured security controls.
+
+Overall, this global view enables cybersecurity professionals to monitor and analyze the sources and patterns of malicious activities, helping them prioritize remediation efforts and enhance their organization's security posture.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/25.%20nsg-malicious-allowed-in%20Screenshot%20Workbook.png" alt="image-alt-text"> 
+
+///////////////
+
+26. This image appears to be a cybersecurity monitoring dashboard from Microsoft Sentinel, displaying failed Windows Remote Desktop Protocol (RDP) authentication attempts across the globe.
+
+The world map shows green dots scattered across different countries and regions, representing the locations from where these failed RDP login attempts originated. One particular red dot in Central Asia stands out, indicating a relatively higher volume of failed RDP authentication attempts originating from that specific location.
+
+The legend at the bottom provides information about the locations and the corresponding number of failed RDP authentication events detected. For example, Tura in India had 3,100 failed attempts, Nishitokyo in Japan had 1,130 attempts, and Saltillo in Mexico had 1,060 failed attempts.
+
+Monitoring failed RDP login attempts is crucial for cybersecurity teams, as successful brute-force attacks on RDP services can grant remote access to systems, potentially leading to further compromises or data breaches.
+
+This global view enables security professionals to identify patterns, sources, and potential targets of such attacks, allowing them to implement appropriate security measures, such as strengthening authentication mechanisms, deploying firewalls, and monitoring unusual activity on RDP services.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/26.%20windows-rdp-auth-fail%20Screenshot%20Workbook.png" alt="image-alt-text"> 
+
+///////////////
+
+27. The image appears to be a summary report showing the security posture and metrics before and after implementing security measures in an environment.
+
+The top portion displays the start and stop time of the analysis period, along with various security event counts across different platforms and services, such as Windows VMs, Linux VMs, Microsoft Defender for Cloud, Microsoft Sentinel incidents, and Network Security Group (NSG) inbound malicious flows allowed and blocked.
+
+The bottom portion showcases the percentage change in these security metrics after securing the environment. The key observations are:
+
+1. Security Events (Windows VMs) decreased by 70%.
+2. Syslog events (Linux VMs) decreased by 69.89%.
+3. Security Alerts from Microsoft Defender for Cloud decreased by 100%.
+4. Security Incidents detected by Microsoft Sentinel decreased by 91.06%.
+5. NSG Inbound Malicious Flows Allowed decreased by 91.42%.
+6. NSG Inbound Malicious Flows Blocked decreased by 100%.
+
+The significant decreases in security events, alerts, incidents, and malicious flows indicate that the implemented security measures were effective in improving the overall security posture of the environment. The reduction in allowed malicious flows suggests enhanced protection against potential threats, while the decrease in blocked flows could be a result of successful threat prevention or reduced attack attempts.
+
+Overall, this report summarizes the positive impact of the security enhancements and provides quantitative metrics to measure the effectiveness of the security implementation.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/27.%20After%20Securing%20environment%20updated%204-11-24.png" alt="image-alt-text"> 
+
+/////////////
+
+28. The image appears to be a screenshot from the Microsoft Azure Sentinel incident management console. It is displaying details about a cybersecurity incident classified as a "Brute Force ATTEMPT - Linux Syslog" against a Linux system.
+
+Key observations from the image:
+
+1. Incident Details: The incident is categorized as a "CUSTOM: Brute Force ATTEMPT - Linux Syslog" with a medium severity level. It is currently assigned a status of "Closed" and has an incident number 1175.
+
+2. Evidence: The incident has 37 associated events, 1 alert, and no bookmarks recorded as evidence.
+
+3. Reason for Closing: The reason provided for closing the incident is "BenignPositive - Suspicious but expected. This IP address was reported 4,219 times, confidence of abuse 100%, https://www.abuseipdb.com/check/218.92.0.94 and additionally GreyNoise has identified this as an IP that is mal-cloud and opportunistically scanning the internet and is not a risk to our organization and it was blocked it at the external Firewall as per SOC playbook."
+
+4. Entities: The incident lists multiple IP addresses as associated entities, including 218.92.0.94, 183.81.169.238, 218.92.0.22, 179.43.180.108, 139.59.106.192, 209.38.144.4, 43.155.133.19, and 43.156.167.125.
+
+5. Tactics and Techniques: The incident is categorized under the "Credential Access" tactic, suggesting that the brute force attempt aimed to gain unauthorized access to credentials or accounts on the Linux system.
+
+6. Similar Incidents: The console displays four other similar incidents (1183, 1180, 1178, and 1179) also categorized as "CUSTOM: Brute Force ATTEMPT - Linux Syslog" with a medium severity level.
+
+Based on the information provided, this appears to be a detected brute force attack attempt against a Linux system, likely targeting user accounts or system credentials. The incident was investigated, and the source IP addresses were identified and blocked at the firewall level. The reason for closing suggests that the incident was deemed benign or expected activity, potentially from a known malicious IP address scanner or cloud service.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/28.%20Brute%20Force%20attempt%20closed.png" alt="image-alt-text">
+
+/////////////////////////////
