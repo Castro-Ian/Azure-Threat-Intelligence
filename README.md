@@ -1,6 +1,6 @@
 # Project-Azure-Threat-Intelligence
 
-Azure Threat Intelligence 
+[Azure Threat Intelligence 
 1. The image displays details about an Azure Storage account named "dogstorageaccount". This storage account is a component of Azure's cloud storage service, which provides secure, highly available, and scalable data storage.
 
 Here are the key details shown in the image:
@@ -16,8 +16,7 @@ Here are the key details shown in the image:
 9. Created: The storage account was created on 3/26/2024 at 7:52:22 PM.
 10. Disk State: Both the primary and secondary locations are showing as "Available".
 
-This information provides insights into the configuration, location, replication setup, and overall status of the "dogstorageaccount" Azure Storage account. It helps administrators understand the storage account's properties, geographical redundancy, and operational state within the Azure environment.
-
+This information provides insights into the configuration, location, replication setup, and overall status of the "dogstorageaccount" Azure Storage account. It helps administrators understand the storage account's properties, geographical redundancy, and operational state within the Azure environment.]
 (https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/1.%20Created%20Storage%20Account.png)
 
 
