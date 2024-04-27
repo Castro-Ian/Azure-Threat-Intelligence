@@ -18,7 +18,7 @@ Here are the key details shown in the image:
 
 This information provides insights into the configuration, location, replication setup, and overall status of the "dogstorageaccount" Azure Storage account. It helps administrators understand the storage account's properties, geographical redundancy, and operational state within the Azure environment.
 
-<img src="[image-url](https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/1.%20Created%20Storage%20Account.png)" alt="image-alt-text">
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/1.%20Created%20Storage%20Account.png" alt="image-alt-text">
 
 2. The image shows the details of a Private Endpoint named "PE-AKV" in the Microsoft Azure environment. A Private Endpoint is a network interface that enables secure, private connectivity from a virtual network to an Azure resource, such as an Azure Key Vault.
 
