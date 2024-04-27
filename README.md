@@ -1,6 +1,6 @@
 # Project-Azure-Threat-Intelligence
 
-Azure Threat Intelligence 
+Azure Threat Intelligence  code pic: <img src="image-url" alt="image-alt-text">
 1. The image displays details about an Azure Storage account named "dogstorageaccount". This storage account is a component of Azure's cloud storage service, which provides secure, highly available, and scalable data storage.
 
 Here are the key details shown in the image:
@@ -20,6 +20,8 @@ This information provides insights into the configuration, location, replication
 
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/1.%20Created%20Storage%20Account.png" alt="image-alt-text">
 
+/////////////////
+
 2. The image shows the details of a Private Endpoint named "PE-AKV" in the Microsoft Azure environment. A Private Endpoint is a network interface that enables secure, private connectivity from a virtual network to an Azure resource, such as an Azure Key Vault.
 
 Here are the key details displayed:
@@ -35,6 +37,11 @@ Here are the key details displayed:
 9. Request/Response: This field is left blank, indicating that no specific request or response data is displayed.
 
 The purpose of this Private Endpoint is to establish a secure, private connection from the "SOC-VNET" virtual network to the "LawDogVault" Azure Key Vault instance. This enables resources within the virtual network to access the Key Vault securely, without exposing it directly to the public internet. Private Endpoints are a critical component of Azure's networking architecture for enhancing security and controlling access to Azure resources.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/2.%20CreatedKeyVault.png" alt="image-alt-text">
+
+////////////
+
 3. The image shows the "Data collection rules" section within the Azure Log Analytics Workspace named "LAW-Dog". This feature allows you to define rules for collecting log data from various sources and routing it to the Log Analytics workspace for analysis, monitoring, and security purposes.
 In this specific view, there is one data collection rule named "DCR-ALL" configured. Here are the details shown for this rule:
 1.	Subscription: The rule is associated with the "Azure subscription 1" subscription.
@@ -44,6 +51,11 @@ In this specific view, there is one data collection rule named "DCR-ALL" configu
 5.	Destinations: The collected log data is being sent to "Azure Monitor Logs", which is the Log Analytics workspace itself.
 6.	Kind: The kind of data collection rule is listed as "All", indicating that it is a general-purpose rule for collecting various types of log data.
 The purpose of this data collection rule is to centralize log data from Windows and Linux systems within the "LAW-Dog" Log Analytics workspace. This allows for unified monitoring, analysis, and security operations across the infrastructure. By collecting and storing log data in Log Analytics, you can leverage various Azure services like Azure Monitor, Azure Sentinel, or custom log analytics solutions to gain insights, detect threats, and proactively manage your Azure environment.
+
+<img src="(https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/3.%20DataCollectionRules.png)" alt="image-alt-text">
+
+///////////////
+
 3.5. The image shows the Watchlist feature in Microsoft Sentinel, which is Azure's cloud-native SIEM (Security Information and Event Management) solution. The Watchlist is a crucial component of Sentinel that allows security analysts and administrators to create and manage lists of entities, such as IP addresses, URLs, or file hashes, that are deemed malicious, suspicious, or of interest for security monitoring and investigation purposes.
 
 In this specific view, the following details are displayed:
@@ -59,11 +71,24 @@ In this specific view, the following details are displayed:
 The Watchlist in Microsoft Sentinel serves as a centralized repository for tracking and monitoring potentially malicious or suspicious entities. Security teams can import data from various sources, such as threat intelligence feeds, internal databases, or manually curated lists, into the Watchlist. Sentinel then correlates incoming log data and security events against the Watchlist entries, enabling efficient threat detection, investigation, and response processes.
 
 In this case, the "geoip" Watchlist is likely used for tracking and monitoring IP addresses based on their geographic locations, which can be helpful in identifying potential threats originating from specific regions or countries.
+
+<img src="(https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/3.5.%20MS%20Sentinel%20Watchlist.png)" alt="image-alt-text">
+
+//////////////////
+
 4. The image shows the Azure Network Watcher Topology view, which is a feature of the Azure Network Watcher service. Network Watcher is a network performance monitoring and diagnostic tool in Azure that provides visualization and insights into your Azure virtual networks.
+   
 In this specific image, the Topology view displays a geo map of the world, with a single location pinpointed at East US, which is likely an Azure region where some of your Azure resources are deployed.
 The Topology view aims to provide a visual representation of your Azure virtual network resources and their interconnections across different Azure regions. It helps you understand the topology and geographic distribution of your network resources within your Azure subscription.
+
 This particular view shows a very simple topology with only one location pinned on the map, suggesting that your Azure virtual network resources are currently deployed in the East US region. The Topology view can become more complex and insightful as you deploy resources across multiple Azure regions, allowing you to visualize the connectivity and data flows between them.
+
 Overall, this image showcases the Network Watcher Topology feature, which is a valuable tool for Azure administrators and security professionals to gain visibility into their Azure network topology, identify potential connectivity issues, and plan for secure and efficient network architectures.
+
+<img src="image-url" alt="image-alt-text">
+
+///////////////////////////
+
 5. The image shows the "Topology" view within the "Network Watcher" tool, which appears to be part of Microsoft Azure. The topology diagram displays a virtual network (VNet) named "SSC-VNET" that contains a subnet. Within the subnet, there are two connected nodes - one labeled "WEB Subnet" and the other "default".
 
 Based on this network topology visualization, it seems to depict a simple Azure virtual network setup with a single subnet containing two resources, likely virtual machines or other compute instances. This provides a high-level overview of how the virtual networking is structured for this particular Azure subscription and region.
@@ -76,6 +101,11 @@ As a cybersecurity specialist, key things I would note are:
 5. Validating encryption is in place as needed for data in-transit across this network topology
 
 Let me know if you need any other details or have additional questions! Analyzing the architecture and security controls of cloud network setups like this is an important part of the cybersecurity role.
+
+<img src="image-url" alt="image-alt-text">
+///////////////////////////
+
+
 5.5. This image shows the "Topology" view within the "Network Watcher" tool from Microsoft Azure, similar to the previous image. However, in this case, the topology diagram displays two connected Azure regions - "East US" and "SSC-VNET".
 
 The "SSC-VNET" icon indicates a virtual network (VNet), while the "East US" icon likely represents an Azure region where some resources are deployed.
@@ -89,6 +119,11 @@ From a cybersecurity perspective, this topology suggests that the Azure environm
 5. Checking that region-specific compliance requirements are being met, if applicable.
 
 Multi-region deployments can provide benefits like high availability and geo-redundancy, but it's important to assess and manage the expanded attack surface and potential security risks that come with a more distributed infrastructure. Let me know if you have any other questions!
+
+<img src="image-url" alt="image-alt-text">
+
+/////////////////////////////////////
+
 6. The provided image shows a more complex network topology within the Microsoft Azure "Network Watcher" tool, spanning multiple Azure regions and virtual networks (VNets).
 
 From the diagram, we can see several interconnected Azure regions, including "SSC-VNET", "AttackRR", "ProximityPlacementGroup396", "WindowsVM", "ChallengeReg", "AttackVM", and others. These regions contain various subnets and virtual machines (VMs).
@@ -107,6 +142,11 @@ From a cybersecurity perspective, some important considerations for this topolog
 Given the scale and complexity of this multi-region topology, it would require careful design, implementation, and ongoing management to maintain a strong security posture. Comprehensive monitoring, incident response plans, and regular security audits would be crucial.
 
 Let me know if you have any other specific questions about securing this type of Azure network architecture!
+
+<img src="image-url" alt="image-alt-text">
+
+////////////////////////////////////////
+
 6.5. The image shows the "Resource View" within the "Network Watcher" tool's "Topology" view in Microsoft Azure. This hierarchical view provides a breakdown of the resources within a specific virtual network (VNet).
 
 The VNet shown is named "SOC-VNET" and it contains a subnet called "default". Within the "default" subnet, there is a resource named "PE-Storage", which appears to be a storage account based on the icon.
@@ -122,7 +162,11 @@ From a cybersecurity standpoint, the key aspects to consider for this resource v
 
 Storage accounts can hold critical data, so it's important to protect them with a defense-in-depth approach involving identity and access management, encryption, monitoring, and secure network configuration. Azure provides various built-in security features for storage, but proper configuration and monitoring are essential.
 
-SEVEN 7. The image shows the "Resource View" for a specific virtual machine (VM) named "PE-AKV" within the "SOC-VNET" virtual network in Microsoft Azure.
+<img src="image-url" alt="image-alt-text">
+
+//////////////////
+
+7. The image shows the "Resource View" for a specific virtual machine (VM) named "PE-AKV" within the "SOC-VNET" virtual network in Microsoft Azure.
 
 The resource hierarchy indicates that the "SOC-VNET" virtual network contains a subnet called "default", and within that subnet, there is a VM resource named "PE-AKV". The icon suggests that "PE-AKV" is likely an Azure Key Vault resource, which is a secure vault for storing and managing cryptographic keys, certificates, and secrets.
 
@@ -138,7 +182,12 @@ From a cybersecurity perspective, some important considerations for this Azure K
 Azure Key Vault is a critical service for securely managing sensitive information, so it's crucial to follow best practices for access control, monitoring, and operational security. Proper configuration and management of Key Vault permissions, logging, and network settings are essential to prevent unauthorized access and protect the confidentiality of the stored secrets.
 
 Let me know if you have any further questions or if there are any other aspects of the resource view you'd like me to discuss from a security standpoint.
-Eight. 8. The image shows the Network Watcher topology view in the Microsoft Azure portal. It displays a resource view of virtual networks (VNets) and virtual machines (VMs) within an Azure subscription and location.
+
+<img src="image-url" alt="image-alt-text">
+
+/////////////////////
+
+ 8. The image shows the Network Watcher topology view in the Microsoft Azure portal. It displays a resource view of virtual networks (VNets) and virtual machines (VMs) within an Azure subscription and location.
 
 From a cybersecurity perspective, here are a few key observations:
 
@@ -151,3 +200,6 @@ From a cybersecurity perspective, here are a few key observations:
 4. Naming conventions: The resource names follow a consistent naming convention, which is important for organization and easier identification of resources. However, from a security standpoint, it's essential to ensure that sensitive information is not inadvertently exposed through resource names.
 
 To further enhance security, it would be important to review the network security group (NSG) rules associated with the VNets and VMs, ensure proper access controls and permissions are in place, and monitor network traffic for any anomalous activities. Regular security assessments and penetration testing can also help identify and remediate potential vulnerabilities in the Azure environment.
+
+<img src="image-url" alt="image-alt-text">
+/////////////////////////////////////////////
