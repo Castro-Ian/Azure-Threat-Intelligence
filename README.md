@@ -207,4 +207,96 @@ To further enhance security, it would be important to review the network securit
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/8.%20Windows%20NIC%20card.png" alt="image-alt-text">
 /////////////////////////////////////////////
 
-8.5 
+8.5. The image shows the Network Watcher tool in Microsoft Azure, displaying the Topology view of a Virtual Network named "WindowsVM-ip". 
+
+The topology diagram visualizes the network resources and their interconnections. It includes 4 Virtual Machines (VMs): WindowsVM-ip, ipconfigx, windowsvm1516, and WindowsVM-rmtg. These VMs appear to be connected together within the same virtual network.
+
+From a cybersecurity perspective, this topology view provides a useful high-level visualization of the network architecture. It allows a security analyst to quickly understand what resources exist, how they are linked, and potentially identify any unusual connectivity or network segmentation issues.
+
+However, to do a deeper security assessment, additional information would be needed beyond just the topology, such as details on the security groups, access controls, OS/software patch levels, and traffic flows between the VMs. The topology is a good starting point to get an architectural overview before digging into the more granular security configurations.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/8.%20WindowsVM-IP.png" alt="image-alt-text">
+
+//////////////////////////
+
+9.The image shows the Network Watcher tool in Microsoft Azure, this time displaying the Topology view of a Virtual Network named "attackvm434".
+
+The topology diagram depicts the network resources and their connections. It includes 4 Virtual Machines (VMs): attackvm434, AttackVM, AttackVM-nsg, and ipconfigx. These VMs are interconnected within the same virtual network subnet.
+
+From a cybersecurity perspective, the naming of these resources raises some potential red flags. Having VMs with names like "attackvm" suggests these may be resources intentionally set up for offensive security testing, such as penetration testing or red team exercises. 
+
+In a real production environment, VMs should follow a naming convention and not have names overtly implying they are for attacking or hacking purposes. The "nsg" suffix on one VM likely stands for "Network Security Group", which is an Azure firewall resource for controlling traffic to VMs.
+
+So while this topology appears to be for a controlled security testing environment, in an actual customer deployment seeing VM names like this should warrant further investigation to ensure these are authorized resources and not something an attacker has deployed. Analyzing the NSG rules and other security controls in place would be crucial to determine if this setup is secure and compliant with organizational policies.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/9.%20Linux%20NIC%20Card.png" alt="image-alt-text">
+
+///////////////////////
+
+9.5. The image shows the Network Watcher tool in Microsoft Azure, displaying the Topology view of a Virtual Network named "AttackVM-ip".
+
+The topology diagram visualizes the network resources and their interconnections. It includes 4 Virtual Machines (VMs): AttackVM-ip, ipconfigx, attackvm434, and AttackVM-nsg. These VMs appear to be connected together within the same virtual network.
+
+Similar to the previous topology, the naming of these VMs suggests they are likely part of an intentional setup for offensive security testing or hacking exercises, rather than a standard production environment. Names like "AttackVM" and "attackvm434" imply these resources may be used for conducting simulated attacks or penetration testing.
+
+From a cybersecurity best practices perspective, even in a testing environment, it's advisable to use less obvious naming conventions. If an unauthorized party gains access to the network, overtly named "attack" VMs could become prime targets for lateral movement and privilege escalation.
+
+Additionally, it would be important to review the Network Security Group (NSG) configurations attached to these VMs to ensure they have appropriate restrictions in place. Proper network segmentation should be implemented to isolate these "attack" VMs from any sensitive resources or production systems.
+
+In summary, while this setup seems to be for controlled security testing, care should still be taken with naming standards and security controls to reduce risk if the environment were to be compromised. Thorough monitoring and audit logging should also be in place to detect any suspicious activities stemming from these "attack" designated resources.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/9.%20LinuxVM-IP.png" alt="image-alt-text">
+
+///////////////////////
+10. The image shows the Network Watcher tool in Microsoft Azure, displaying the Topology view of a Virtual Network named "QualysVM-Netint-97b3".
+
+The topology diagram visualizes the network resources and their interconnections. It includes 3 Virtual Machines (VMs): QualysVM-Netint-97b3, QualysVM, and QualysVM-nsg-97b3, as well as what appears to be a subnet or gateway resource called ipconfigx. These resources are connected within the same virtual network.
+
+As in the previous example, the naming convention used for these VMs suggests they are part of a Qualys security deployment, likely running vulnerability scans, integrity monitoring or compliance checks on the Azure environment.
+
+From a cybersecurity perspective, a few observations and recommendations:
+
+1. Network Segmentation: The Qualys VMs should be properly isolated in a dedicated security subnet, with strict Network Security Group (NSG) rules controlling inbound and outbound access. The Qualys components should have the minimum required connectivity to perform their function.
+
+2. Secure Configuration: The Qualys VMs themselves need to be hardened, patched, and properly configured to prevent them from being compromised. Access should be restricted to authorized security personnel only.
+
+3. Encryption: Any sensitive data collected by the Qualys tools, such as vulnerability details or system configurations, should be encrypted in transit and at rest.
+
+4. Monitoring: In addition to the security monitoring performed by Qualys, the Qualys infrastructure itself should be monitored for any signs of misuse, tampering, or anomalous activity. Alerts should trigger if the Qualys VMs are accessed outside of expected maintenance windows.
+
+5. Naming Convention: While the "Qualys" naming helps identify the purpose of these resources, using more generic names and applying proper resource tagging would be advisable to avoid providing clear attack targets.
+
+In summary, the use of Qualys suggests the organization is taking proactive steps to assess and manage their cloud security posture. However, it's crucial that the Qualys deployment itself adheres to security best practices to prevent it from being subverted by attackers. Regular testing and validation of the Qualys setup, along with well-defined processes around managing and responding to the Qualys findings, are key to maximizing the security benefits it can provide.
+
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/10.%20Qualys%20NIC%20Card.png" alt="image-alt-text">
+
+
+//////////////////////
+
+10.5 The image shows the Network Watcher tool in Microsoft Azure, displaying the Topology view of a Virtual Network named "QualysVM-ip-500".
+
+The topology diagram visualizes the network resources and their interconnections. It includes 4 Virtual Machines (VMs): QualysVM-ip-500, ipconfigx, QualysVM-Netint-9763, and QualysVM-nsg-9763. These VMs appear to be connected within the same virtual network subnet.
+
+From a cybersecurity perspective, the naming of these resources suggests they are related to Qualys, which is a well-known provider of cloud security and compliance solutions. Qualys offers vulnerability management, web application scanning, and other security tools typically used by organizations to assess and monitor their security posture.
+
+The presence of "Qualys" in the VM names implies these resources may be part of a deployment for running Qualys security scans or agents within this Azure environment. This could be part of a routine vulnerability assessment, compliance checks, or ongoing security monitoring process.
+
+However, as a security best practice, it's generally recommended to avoid using overtly descriptive names that reveal the specific security tools in use. If an attacker gains access to the environment, they could potentially target these Qualys-named VMs to attempt to disable or evade the security monitoring.
+
+To further assess the security of this Qualys setup, it would be important to review:
+
+1. Network Security Group (NSG) rules to ensure only required ports and protocols are permitted.
+2. Access controls and authentication mechanisms for managing the Qualys VMs.  
+3. Data encryption for any sensitive vulnerability/scan result data stored by Qualys.
+4. Monitoring and alerting to detect any unusual behavior or potential tampering of the Qualys VMs.
+
+In summary, while the use of Qualys suggests a positive security initiative, care should be taken to properly secure and monitor the Qualys deployment itself following security best practices and the principle of least privilege. The naming convention used also warrants review to avoid providing unnecessary system details to potential attackers.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/10.%20Qualys%20NIC%20Card.png" alt="image-alt-text">
+
+////////////////////
+
+
+
+
