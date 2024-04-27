@@ -38,7 +38,7 @@ Here are the key details displayed:
 
 The purpose of this Private Endpoint is to establish a secure, private connection from the "SOC-VNET" virtual network to the "LawDogVault" Azure Key Vault instance. This enables resources within the virtual network to access the Key Vault securely, without exposing it directly to the public internet. Private Endpoints are a critical component of Azure's networking architecture for enhancing security and controlling access to Azure resources.
 
-<img src="(https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/2.%20CreatedKeyVault.png)" alt="image-alt-text">
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/2.%20CreatedKeyVault.png" alt="image-alt-text">
 
 ////////////
 
@@ -55,7 +55,7 @@ In this specific view, there is one data collection rule named "DCR-ALL" configu
    
 The purpose of this data collection rule is to centralize log data from Windows and Linux systems within the "LAW-Dog" Log Analytics workspace. This allows for unified monitoring, analysis, and security operations across the infrastructure. By collecting and storing log data in Log Analytics, you can leverage various Azure services like Azure Monitor, Azure Sentinel, or custom log analytics solutions to gain insights, detect threats, and proactively manage your Azure environment.
 
-<img src="(https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/3.%20DataCollectionRules.png)" alt="image-alt-text">    
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/3.%20DataCollectionRules.png" alt="image-alt-text">    
 
 ///////////////
 
@@ -75,7 +75,7 @@ The Watchlist in Microsoft Sentinel serves as a centralized repository for track
 
 In this case, the "geoip" Watchlist is likely used for tracking and monitoring IP addresses based on their geographic locations, which can be helpful in identifying potential threats originating from specific regions or countries.
 
-<img src="(https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/3.5.%20MS%20Sentinel%20Watchlist.png)" alt="image-alt-text">
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/3.5.%20MS%20Sentinel%20Watchlist.png" alt="image-alt-text">
 
 //////////////////
 
