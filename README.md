@@ -1,6 +1,6 @@
 # Project-Azure-Threat-Intelligence
 
-Azure Threat Intelligence  code pic: <img src="image-url" alt="image-alt-text">
+Azure Threat Intelligence  
 1. The image displays details about an Azure Storage account named "dogstorageaccount". This storage account is a component of Azure's cloud storage service, which provides secure, highly available, and scalable data storage.
 
 Here are the key details shown in the image:
@@ -722,3 +722,75 @@ Based on the information provided, this appears to be a detected brute force att
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/28.%20Brute%20Force%20attempt%20closed.png" alt="image-alt-text">
 
 /////////////////////////////
+
+29. The image displays the Microsoft Azure interface, specifically within the Microsoft Sentinel section, which is Azure's security information and event management (SIEM) platform. The page shown is focused on an incident labeled "CUSTOM: Brute Force ATTEMPT - Linux Syslog."
+
+Key elements visible in the screenshot are:
+
+1. Incident Overview: The main panel outlines the details of a closed incident tagged with medium severity. The incident's owner is listed, and a description section below awaits further details.
+
+2. Incident Details: The reason for closing this incident is provided. It's marked as a "Benign-Positive - Suspicious but expected" event, and it's noted that this IP was reported 1,412 times, with a 100% confidence of abuse score. There is a reference to an external entity that has identified this as an IP that is not risky to the organization and has been blocked at the external firewall as per the Security Operations Center (SOC) playbook.
+
+3. Evidence Section: Shows 4 events and 2 alerts associated with the incident, with no bookmarks added. The last update and creation time for the incident are displayed on the left.
+
+4. Entities: Two entities are involved – an IP address "218.92.0.93" linked to "AttackVM" hostname, and another IP address "115.194.81.132". This suggests these IPs were likely sources of the brute force attempt.
+
+5. Tactics and Techniques: Under this, "Credential Access" is listed, implying that the brute force attempt was aimed at gaining unauthorized access to credentials.
+
+6. Similar Incidents: A side panel lists other incidents with medium severity, all titled "CUSTOM: Brute Force ATTEMPT - Linux Syslog" but with different incident numbers and times, suggesting a series of related security events.
+
+7. Navigation and Functionality: The interface includes standard Microsoft Azure navigation elements, tabs for 'Incident overview', 'Logs', 'Entities', and other management features, reflecting a user-friendly and detailed approach to incident management within a cybersecurity context.
+
+This snapshot provides an insight into the monitoring and response capabilities available in Microsoft Sentinel for detecting and handling potential cybersecurity incidents such as brute force attacks. The ability to tag, classify, and take action on such incidents is critical for maintaining the integrity and security of IT infrastructures.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/29.%20Closed%20Brute%20force%202.png" alt="image-alt-text">
+
+/////////////
+
+30. The image is a screenshot from the Microsoft Azure portal, specifically within the Microsoft Sentinel service, showcasing a security incident management interface. The incident, named "CUSTOM: Brute Force SUCCESS - Linux Syslog," has been assigned a high severity but is currently marked as closed.
+
+Key elements present in the screenshot are:
+
+1. **Incident Metadata**: Shows the incident has a high severity level, the status is closed, and the owner is identified as Ian Castro.
+
+2. **Workspace**: Identified as 'law-dog,' likely a designated area within Sentinel for organizing and managing related security data.
+
+3. **Closing Reason**: The reason given for closing the incident is a "FalsePositive - Inaccurate data," which implies that the initial alert was identified as a false positive. The note explains that it was a result of the user failing to log in several times before succeeding, which can often trigger security alerts for suspicious activity.
+
+4. **Evidence Section**: The evidence related to this incident includes one event and one alert, with no bookmarks.
+
+5. **Entities**: The entities section lists an IP address "10.0.0.6" and a host named "AttackVM," which suggests that these may have been involved in the incident.
+
+6. **Tactics and Techniques**: Listed under this category is "Credential Access," which typically refers to techniques that attackers use to steal credentials. However, given the incident was marked as a false positive, no actual credential theft may have occurred.
+
+7. **Related Incidents**: The side panel displays related incidents, with different severities and statuses, providing context that this incident may be part of a pattern or series of detected activities.
+
+This interface provides cybersecurity professionals with an organized view to monitor, triage, and manage security incidents efficiently. It also reflects the importance of contextual understanding in cybersecurity operations, where not all alerts necessarily signify malicious activity, and proper investigation is crucial to determine the true nature of the incidents.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/30.%20Linux%20Syslog%20Closed.png" alt="image-alt-text">
+
+//////////////////
+
+31. The image shows the Microsoft Azure interface, focusing on the configuration of Network Security Groups (NSGs). NSGs are used to control network traffic to and from Azure resources within an Azure virtual network. The screenshot specifically highlights the security rules that determine the allowed and denied traffic for network interfaces (NICs), VMs, and subnets.
+
+Key elements visible in the screenshot include:
+
+1. NSG Overview: The left panel indicates a list of Network Security Groups (NSGs) within the Azure environment, showing "AttackVM-nsg" and other NSG entries.
+
+2. Security Rules: The central section of the window displays the "WindowsVM-nsg" security group's inbound and outbound security rules. It shows a mix of rules with different priorities, including some with custom-defined properties.
+
+3. Highlighted Security Rule: A rule named "DenyCidrBlockCustomAnyInbound" is selected, with a priority of 130. The configuration pane on the right displays details of this rule, where traffic from specific source IP address ranges is set to be denied. This demonstrates the implementation of a security measure to prevent access to the network from the specified IP addresses.
+
+4. Rule Details:
+   - Source IP Addresses/CIDR ranges: Lists the IP ranges that are being blocked, indicative of IPs that might be deemed a security threat.
+   - Destination**: Set to "Any," meaning the rule applies to all potential destination addresses within the NSG's scope.
+   - Service: Labeled as "Custom," suggesting that the service or application being protected by this rule isn't one of the commonly predefined services.
+   - Protocol: Set to "Any," so the rule applies to all types of network protocols.
+   - Action: Set to "Deny," which actively blocks traffic from the defined source IPs.
+   - Priority: Given a priority of 130, which dictates the order of processing rules - lower numbers have higher priority.
+
+5. Sidebar Elements: These include further navigation and configuration options like activity logs, access control (IAM), and monitoring features such as alerts, diagnostic settings, and log management.
+
+This NSG configuration snapshot is instrumental for cybersecurity specialists in ensuring the right security posture is maintained. It shows how granular access control can be enforced for a network segment within an Azure environment to protect against unauthorized access or other security risks.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/31.%20NSG%20Blocked%20Ip%20address.png" alt="image-alt-text">
