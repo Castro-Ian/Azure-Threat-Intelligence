@@ -248,6 +248,7 @@ In summary, while this setup seems to be for controlled security testing, care s
 <img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/9.%20LinuxVM-IP.png" alt="image-alt-text">
 
 ///////////////////////
+
 10. The image shows the Network Watcher tool in Microsoft Azure, displaying the Topology view of a Virtual Network named "QualysVM-Netint-97b3".
 
 The topology diagram visualizes the network resources and their interconnections. It includes 3 Virtual Machines (VMs): QualysVM-Netint-97b3, QualysVM, and QualysVM-nsg-97b3, as well as what appears to be a subnet or gateway resource called ipconfigx. These resources are connected within the same virtual network.
@@ -297,6 +298,134 @@ In summary, while the use of Qualys suggests a positive security initiative, car
 
 ////////////////////
 
+11. The image shows a data collection rule named "DCR-ALL" within the Microsoft Azure Log Analytics workspace interface. This rule appears to collect data from multiple sources, specifically Windows Event Logs and Linux Syslog, and sends the collected data to two destinations labeled "Azure Monitor Logs".
 
+From a cybersecurity perspective, collecting and centrally aggregating log data from various sources is a crucial practice for effective security monitoring, incident detection, and investigation. By consolidating logs from different systems, such as Windows and Linux, into a centralized repository like Azure Monitor Logs, security teams can gain a comprehensive view of their environment, perform correlation analysis, and identify potential security threats or anomalies.
 
+However, it's important to ensure that appropriate access controls and data protection measures are in place for the collected log data. Only authorized personnel should have access to the log analytics workspace and the sensitive information it may contain. Additionally, the data should be properly secured both in transit and at rest, using encryption and other security best practices to maintain its confidentiality and integrity.
+
+Regular review and fine-tuning of the data collection rules are also recommended to ensure that only relevant and necessary log data is being collected, minimizing noise and storage costs while still providing adequate visibility for security monitoring purposes.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/11.%20Log%20Analytics%20Workspace%20Data%20Sources.png" alt="image-alt-text">
+
+////////////////////////////
+
+12. The image shows an "Add data source" dialog box within the Microsoft Azure Log Analytics workspace interface, specifically for the "DCR-ALL" data collection rule.
+
+The selected data source type is "Windows Event Logs", and the configuration options allow for choosing between using Sentinel (the Microsoft Defender for Cloud built-in connector) or a custom configuration to collect Windows Security events.
+
+If using Sentinel, it aims to collect Windows Security events to avoid unexpected increases in storage costs. The custom option provides more control over which specific event logs are collected.
+
+The dialog box lists several event log categories that can be selected for collection, such as:
+
+1. Application events (System([Level=4 or Level=0]))
+2. Security events (System([band(Keywords,13510798882111488)]))
+3. Microsoft-Windows-Windows Defender/Operational events (System([EventID=1116 or EventID=1117]))
+4. Microsoft-Windows-Windows Firewall With Advanced Security/Firewall events (System([EventID=2003]))
+
+From a cybersecurity perspective, collecting and monitoring these event logs is crucial for detecting and investigating potential security incidents. Windows Security events can provide valuable insights into authentication attempts, access control changes, and other security-related activities. Application and system events can help identify application failures, misconfigurations, or unexpected behavior that may indicate a security issue.
+
+Windows Defender and Firewall events are particularly important for monitoring endpoint security, as they can reveal malware detection, quarantine actions, and changes to firewall rules that could potentially expose the system to threats.
+
+However, it's essential to carefully consider the storage costs associated with collecting a large volume of event logs and to fine-tune the collection settings to strike a balance between having sufficient visibility and managing storage efficiently. Using XPath queries to filter event logs and limit data collection, as mentioned in the dialog box, is a good practice to optimize log collection.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/12.%20LAW-Windows%20Event%20Logs%20Custom.png" alt="image-alt-text">
+
+//////////////////////////
+
+13. The image shows the same "Add data source" dialog box within the Microsoft Azure Log Analytics workspace interface for the "DCR-ALL" data collection rule, but with the "Custom" option selected for collecting Windows Event Logs.
+
+In this custom configuration, the user has more granular control over which specific event log levels and categories are collected. The available options include:
+
+Application logs:
+- Critical
+- Error
+- Warning
+- Information
+- Verbose
+
+Security logs:
+- Audit success
+- Audit failure
+
+System logs (no specific levels shown)
+
+Collecting logs at different levels allows for capturing events of varying severity and importance. From a cybersecurity perspective, this customization enables fine-tuning the log collection to prioritize the most critical events while potentially reducing noise and storage costs.
+
+For example, collecting "Critical", "Error", and "Warning" events from the Application logs can help identify significant application issues or potential indicators of compromise. "Information" and "Verbose" logs may provide additional context but might also generate a higher volume of less relevant data.
+
+Similarly, capturing both "Audit success" and "Audit failure" events from the Security logs is crucial for maintaining visibility into successful and failed access attempts, privilege escalation, and other security-related activities.
+
+System logs can contain valuable information about system health, performance, and stability, which may be relevant for identifying potential security issues or misconfigurations.
+
+By carefully selecting the appropriate log levels and categories, organizations can strike a balance between having comprehensive security visibility and managing the associated storage and analysis costs effectively. It's important to regularly review and adjust these settings based on the organization's specific security requirements, risk profile, and available resources. 
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/13.%20LAW%20Windows%20Events%20Logs.png" alt="image-alt-text">
+
+//////////////////////
+
+14. The image shows the "Add data source" dialog box within the Microsoft Azure Log Analytics workspace interface for the "DCR-ALL" data collection rule. In this case, the selected data source type is "Linux Syslog".
+
+The dialog box allows for setting minimum log levels for selected syslog facilities. The available facilities include:
+
+1. LOG_ALERT
+2. LOG_AUDIT
+3. LOG_AUTH
+4. LOG_AUTHPRIV
+5. LOG_CLOCK
+6. LOG_CRON
+7. LOG_DAEMON
+8. LOG_FTP
+9. LOG_KERN
+10. LOG_LOCAL0
+
+For each facility, the minimum log level can be set, with the options being "Not set" or a specific log level such as "LOG_DEBUG", "none", or others (not fully visible in the image).
+
+From a cybersecurity perspective, collecting and monitoring Linux syslogs is crucial for maintaining visibility into the activities and events occurring on Linux-based systems within the organization's environment. Syslogs can provide valuable information about system behavior, user activities, network connections, and potential security incidents.
+
+By setting appropriate minimum log levels for each syslog facility, organizations can control the verbosity and granularity of the collected logs. This allows for focusing on the most relevant and critical events while minimizing noise and storage requirements.
+
+For example, setting a minimum log level of "LOG_DEBUG" for the "LOG_AUTH" facility can help capture detailed authentication-related events, which are essential for detecting unauthorized access attempts, brute-force attacks, or other security breaches.
+
+Similarly, monitoring facilities like "LOG_DAEMON", "LOG_KERN", and "LOG_CRON" can provide insights into system services, kernel-level events, and scheduled job activities, respectively. These logs can help identify system misconfigurations, performance issues, or suspicious behavior that may have security implications.
+
+It's important to regularly review and adjust the syslog collection settings based on the organization's specific security requirements, risk profile, and available resources. Balancing the need for comprehensive logging with the associated storage and analysis costs is crucial for maintaining an effective and efficient security monitoring strategy.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/14.%20Linux%20Syslog.png" alt="image-alt-text"> 
+
+////////////////////
+
+15. The image shows the "Agents" page within the "LAW-Dog" Log Analytics workspace in the Microsoft Azure portal. It provides an overview of the connected agents for both Windows and Linux servers.
+
+According to the information displayed, there is 1 Windows computer connected via the Azure Monitor Windows agent, and 1 Windows computer connected via the Log Analytics Windows agent (legacy). The "See them in Logs" link suggests that more details about these connected computers can be found in the collected logs.
+
+Below the agent information, there is a section prompting the user to set up the new Azure Monitor agent by navigating to the "Data Collection Rules" section.
+
+From a cybersecurity perspective, having visibility into the connected agents is crucial for ensuring that all relevant systems are properly monitored and that their logs are being collected for security analysis. The Azure Monitor and Log Analytics agents play a key role in collecting and forwarding log data from the connected Windows and Linux machines to the Log Analytics workspace.
+
+It's important to ensure that the agents are deployed on all critical systems and are configured to collect the necessary log data for security monitoring purposes. This includes system events, security logs, application logs, and any other relevant data sources.
+
+Regular maintenance and updates of the agents are also essential to ensure compatibility with the latest security features and to address any potential vulnerabilities. Monitoring the health and connectivity of the agents is crucial to avoid any gaps in log collection that could hinder security visibility.
+
+The prompt to set up the new Azure Monitor agent suggests that there might be newer and enhanced capabilities available. Evaluating and potentially transitioning to the new agent could provide additional benefits and improvements in terms of log collection, performance, and security features.
+
+Overall, keeping a close eye on the connected agents, ensuring their proper configuration, and staying up to date with the latest agent versions and capabilities are important aspects of maintaining a robust security monitoring and log management setup within the Azure environment.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/15.%20Monitor%20for%20Windows.png" alt="image-alt-text">
+
+/////////////////////
+
+16. The image shows the "Configure Fusion" step in the Analytics Rule Wizard for Microsoft Sentinel, which is a cloud-native Security Information and Event Management (SIEM) solution provided by Microsoft Azure.
+
+In this step, you can configure the source signals that Microsoft Sentinel's Fusion machine learning model will use to detect multi-stage attacks by identifying combinations of anomalous behaviors and suspicious activities at various stages of the kill chain.
+
+The available sources include Anomalies, various Microsoft Defender products (for Endpoint, Identity, IoT, Office 365, etc.), Azure Sentinel analytics rules, and Microsoft 365 Defender. All of these sources appear to be included by default, with the option to select specific severity levels for each one.
+
+There is also a section to exclude specific detection patterns from Fusion detection if needed, although no patterns are currently excluded in this example.
+
+Overall, this interface allows you to customize which data sources and alert types will be fed into the Fusion detection model, helping to optimize its ability to identify advanced, multi-stage cyber threats targeting your organization's infrastructure and assets.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/16.%20Sentinel%20Fusion%20Rule.png" alt="image-alt-text">
+
+///////////////////
 
