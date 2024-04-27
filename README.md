@@ -429,3 +429,179 @@ Overall, this interface allows you to customize which data sources and alert typ
 
 ///////////////////
 
+16.5. The image shows the configuration options for an Azure Storage Account named "dogstorageaccount" in the Microsoft Azure portal.
+
+Here are the key details and settings visible:
+
+1. Account kind: StorageV2 (general purpose v2) - This is the latest account type that supports all storage services like Blobs, Files, Queues, Tables, etc.
+
+2. Performance: Standard is selected, which offers consistent and reliable performance at low costs. Premium option provides higher throughput for workloads with heavy usage patterns.
+
+3. Secure transfer required: Enabled, ensuring that only secure connections (HTTPS) can access the storage account.
+
+4. Allow Blob anonymous access: Disabled, preventing anonymous public access to Blob data.
+
+5. Allow storage account key access: Enabled, allowing requests using the account access keys.
+
+6. Other security-related options like shared access signature (SAS) expiry interval and Microsoft Entra authorization are disabled.
+
+7. Minimum TLS version: Not specified, uses the default Azure setting.
+
+The configuration shows some secure defaults like disabling anonymous Blob access and enabling secure transfers. However, enabling account key access may need additional review based on security requirements. Overall, it allows configuring the storage account type, performance, security, and data access settings as per the application needs.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/16.5.%20Allow%20Blob%20storage%20disabled.png" alt="image-alt-text">
+
+///////////////////////
+
+16.7. The image shows the networking configuration settings for an Azure Key Vault resource named "LawDogVault" in the Microsoft Azure portal.
+
+The key security-related settings visible are:
+
+1. Firewalls and virtual networks:
+   - "Disable public access" is selected, which blocks all public internet traffic from accessing this Key Vault resource.
+
+2. Exception:
+   - "Allow trusted Microsoft services to bypass this firewall" is checked. This setting allows trusted Azure platform services to access the Key Vault, bypassing the firewall rules.
+   - However, it's noted that explicit access permissions still need to be granted in the Access Policies section for trusted services to access this Key Vault.
+
+3. Private Endpoint Connections:
+   - This section is not shown in the image, but it allows configuring private endpoints for the Key Vault, enabling secure connectivity from virtual networks.
+
+By disabling public access and requiring private endpoints or trusted service exceptions, these networking settings help secure the Azure Key Vault from unauthorized public access. The "trusted services bypass" setting provides a controlled exception for Azure platform services to access the Key Vault for management or integration purposes while still blocking general internet traffic.
+
+Overall, these settings align with security best practices for an Azure Key Vault by restricting network access and enabling secure private connectivity options.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/16.7.%20Disabled%20public%20acces%20to%20key%20vault.png" alt="image-alt-text">
+
+//////////////
+
+17. The image shows the networking configuration settings for an Azure Storage Account named "dogstorageaccount".
+
+Key observations:
+
+1. Public Network Access: The public network access to this storage account has been explicitly disabled. A message prompts creating a private endpoint connection to grant access instead.
+
+2. Firewall Settings: A note mentions that firewall settings restricting access will remain in effect for up to a minute after saving any updated settings.
+
+3. Network Routing: The routing preference is set to "Microsoft network routing" which routes traffic through Microsoft's network for most scenarios. The alternative "Internet routing" option is not selected.
+
+4. Publish Route-Specific Endpoints: This setting is left unchecked, meaning all services within the storage account will use the same networking settings.
+
+From a cybersecurity perspective, these settings align with best practices:
+
+- Disabling public network access and requiring private endpoints enhances security by restricting direct internet access.
+
+- Using Microsoft network routing keeps data transfers within Microsoft's network instead of routing over the public internet.
+
+- The temporary delay in applying firewall changes aims to prevent accidental lockout and disruptions.
+
+Overall, the configuration aims to minimize exposure to public networks and leverage Azure's private networking capabilities for secure data transfers to and from the storage account. Creating private endpoint connections as prompted would further strengthen secure connectivity.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/17.%20SC7.png" alt="image-alt-text">
+
+//////////////////
+
+17.5. The image shows the "Security Policies" section of the Microsoft Defender for Cloud offering in the Azure portal. This page allows you to manage and apply various security standards and benchmarks to your cloud environment.
+
+The key elements visible are:
+
+1. Security Standards: This section lists several predefined security standards and compliance benchmarks that can be assigned. These include:
+   - Microsoft Cloud Security Benchmark (Default)
+   - NIST SP 800-171 Rev. 2 (Compliance)
+   - CIS Microsoft Azure Foundations Benchmarks v2.0.0 and v1.1.0 (Compliance)
+   - NIST SP 800-53 Rev. 5 (Compliance, currently assigned at the Management Group level)
+   - [Preview] Australian Government ISM PROTECTED (Compliance)
+
+2. Each standard contains a set of security recommendations (e.g., 242 for Microsoft Cloud Security Benchmark) aligned with that particular benchmark or regulation.
+
+3. The toggle switches allow enabling or disabling the application of a specific standard across your cloud environment.
+
+4. Currently, only the "NIST SP 800-53 Rev. 5" standard is enabled, and it appears to be applied at the Management Group level.
+
+Applying these security standards and benchmarks helps ensure compliance with industry regulations and best practices for secure cloud configurations. Selecting the appropriate standards aligns your Azure environment with the required security controls and policies based on your organization's needs and regulatory requirements.
+
+Overall, this interface provides a centralized way to manage and enforce security baselines consistently across your Azure resources, helping to maintain a secure and compliant cloud posture.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/17.5%20Security%20Policy%20Screenshot%20Microsoft%20Defender.png" alt="image-alt-text">
+
+/////////////////
+
+18. The image appears to be a screenshot from the Microsoft Azure portal, specifically the "Create a private endpoint" section for a storage account named "dogstorageaccount". This section allows you to configure network access and DNS settings for the private endpoint.
+
+From a cybersecurity perspective, a few key points can be observed:
+
+1. Private Endpoints: The ability to create a private endpoint is a security feature that allows you to securely connect to Azure resources (in this case, a storage account) from within your virtual network, without exposing the resource to the public internet. This reduces the attack surface by eliminating direct exposure to the public internet.
+
+2. DNS Integration: The image shows options for integrating the private endpoint with a private DNS zone or using your own DNS servers/host files. Properly configuring DNS is crucial for secure name resolution and avoiding potential DNS rebinding attacks.
+
+3. Virtual Network Isolation: By using a private endpoint within a virtual network, the storage account traffic is isolated from the public internet, mitigating the risk of unauthorized access or data exfiltration.
+
+4. Subscription and Resource Group: The subscription and resource group details are shown, indicating the scope and organization of the Azure resources being configured.
+
+Overall, the use of private endpoints and proper DNS configuration can enhance the security posture of Azure resources by reducing exposure to the public internet and providing a more controlled network access pattern.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/18.%20Private%20DNS.png" alt="image-alt-text">
+
+/////////////////
+
+19. The image shows a concerning security configuration in the Microsoft Azure portal. There is a network security group (NSG) named "AttackVM-nsg" with an inbound security rule "DANGERAllowAnyCustomAnyInbound" that appears to allow any source on any port using any protocol to access the associated resources.
+
+This kind of overly permissive inbound rule essentially opens up the resources associated with this NSG to potential attacks from any source on the internet, which is an extremely risky security practice. It negates the purpose of using network security groups to control and restrict access.
+
+Some specific security concerns with this configuration:
+
+1. Open to attacks: By allowing "Any" source, port, and protocol, this rule exposes the resources to potential malicious traffic, unauthorized access attempts, and various cyber attacks like port scanning, brute-force attacks, and exploitation of vulnerabilities.
+
+2. Lack of restrictions: Best security practices dictate allowing only the minimum required network access by explicitly defining allowed IP addresses, port ranges, and protocols based on legitimate business needs.
+
+3. Risk of data exposure: Depending on the type of resources associated with this NSG, this overly permissive rule could lead to unauthorized access and potential data exfiltration or compromise.
+
+4. Naming convention: The naming of the rule as "DANGERAllowAny..." suggests it may have been created for testing purposes but was inadvertently left in production, which is a security risk.
+
+It is strongly recommended to review and remediate this security rule immediately by either removing it entirely or replacing it with properly restricted and secure inbound rules that align with security best practices and the principle of least privilege.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/19.%20Attack%20VM%20Firewall%20Honey%20Net.png" alt="image-alt-text">
+
+////////////////////
+
+20. The image shows another extremely concerning security configuration within the Microsoft Azure portal. There is a network security group named "WindowsVM-nsg" that has an inbound security rule called "DANGERAllowAnyCustomAnyInbound" with the highest priority (100). This rule allows any source from any port using any protocol to access resources associated with this network security group.
+
+This overly permissive inbound rule essentially exposes the associated resources to potential attacks from any source on the internet, presenting a significant security risk. Some specific security concerns are:
+
+1. Unrestricted access: By allowing "Any" source, port, and protocol, this rule opens up the resources to unauthorized access attempts, exploitation of vulnerabilities, and various cyber threats like port scanning, brute-force attacks, and remote code execution.
+
+2. Highest priority: With a priority of 100, this rule takes precedence over any other inbound rules, making it extremely difficult to restrict access through other rules.
+
+3. Lack of principle of least privilege: This rule violates the security principle of least privilege by granting unrestricted access instead of explicitly allowing only the minimum required access based on legitimate business needs.
+
+4. Potential data exposure: Depending on the type of resources associated with this NSG, this rule could lead to unauthorized access and potential data exfiltration or compromise.
+
+5. Naming convention: The naming convention "DANGERAllowAny..." suggests this rule may have been created for testing purposes but was inadvertently left in production, which is a critical security oversight.
+
+It is strongly recommended to review and remediate this security rule immediately by either removing it entirely or replacing it with properly restricted and secure inbound rules that align with security best practices and the principle of least privilege. Leaving such an overly permissive rule in place significantly increases the risk of successful cyber attacks and data breaches.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/20.%20Windows%20VM%20Firewall%20RuleHoney%20Net%20Screenshot.png" alt="image-alt-text">
+
+///////////////////////////
+
+21. The image shows the Analytics section of Microsoft Sentinel, which is a cloud-native security information and event management (SIEM) solution. Specifically, it displays the list of active detection rules configured within the selected workspace.
+
+From a cybersecurity perspective, a few key observations can be made:
+
+1. Rule Coverage: The rules cover a wide range of security threats, including advanced multi-stage attacks, brute-force attempts, privilege escalation, malware detection, lateral movement, and more. This comprehensive coverage helps detect and respond to various attack vectors and techniques.
+
+2. Severity Levels: The rules are categorized based on severity levels - High, Medium, and Low. High severity rules focus on critical threats like brute-force attacks, privilege escalation, and malware, which aligns with security best practices of prioritizing high-risk threats.
+
+3. Custom Rules: Many of the rules are marked as "CUSTOM," indicating they are tailored to the specific environment or requirements. This allows for better detection of threats specific to the organization's assets and security posture.
+
+4. Rule Types: The rules are a combination of scheduled rules (periodically evaluating conditions) and fusion rules (correlating multiple data sources). This hybrid approach enhances detection capabilities by leveraging different rule types.
+
+5. Tactics and Techniques: The rules are mapped to specific tactics and techniques from the MITRE ATT&CK framework, a widely recognized knowledge base of adversary tactics and techniques. This mapping helps understand the potential attack vectors and facilitate effective response and mitigation.
+
+6. Source Names: Some rules are sourced from the "Gallery Content," which likely refers to pre-built rules provided by Microsoft, while others are "Custom Content," suggesting they are custom-built rules specific to the organization's needs.
+
+Overall, the image showcases a well-configured Microsoft Sentinel deployment with a comprehensive set of detection rules covering various security threats and tailored to the organization's specific requirements. This proactive approach to security monitoring and threat detection is essential for maintaining a robust cybersecurity posture.
+
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/21.%20Sentinel%20Analytics%20Incidents%20(SIEM).png" alt="image-alt-text">
+
+////////////////////
