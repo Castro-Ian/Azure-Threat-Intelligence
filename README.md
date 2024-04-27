@@ -293,7 +293,7 @@ To further assess the security of this Qualys setup, it would be important to re
 
 In summary, while the use of Qualys suggests a positive security initiative, care should be taken to properly secure and monitor the Qualys deployment itself following security best practices and the principle of least privilege. The naming convention used also warrants review to avoid providing unnecessary system details to potential attackers.
 
-<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/10.%20Qualys%20NIC%20Card.png" alt="image-alt-text">
+<img src="https://github.com/Castro-Ian/Project-Azure-Threat-Intelligence/blob/main/Azure%20Threat%20Intelligence%20screenshots/10.%20QualysVM-IP.png" alt="image-alt-text">
 
 ////////////////////
 
